@@ -26,6 +26,11 @@ to_process = {
         'nn_curve': False,
         'multiple_trials': True
     },
+    'COUNTONES': {
+        'path': 'COUNTONES',
+        'nn_curve': False,
+        'multiple_trials': True
+    },
     'TSP': {
         'path': 'TSP',
         'nn_curve': False,
