@@ -24,9 +24,9 @@ OUTFILE = OUTPUT_DIRECTORY + '/NN_OUTPUT/NN_{}_LOG.csv'
 
 def main():
     """Run this experiment"""
-    training_ints = initialize_instances('data/UFC_train.csv')
-    testing_ints = initialize_instances('data/UFC_test.csv')
-    validation_ints = initialize_instances('data/UFC_validate.csv')
+    training_ints = initialize_instances('data/Ufc_train.csv')
+    testing_ints = initialize_instances('data/Ufc_test.csv')
+    validation_ints = initialize_instances('data/Ufc_validate.csv')
     factory = BackPropagationNetworkFactory()
     measure = SumOfSquaresError()
     data_set = DataSet(training_ints)
