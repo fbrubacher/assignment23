@@ -13,9 +13,9 @@ from func.nn.activation import RELU
 from base import *
 
 # Network parameters found "optimal" in Assignment 1
-INPUT_LAYER = 7
-HIDDEN_LAYER1 = 16
-HIDDEN_LAYER2 = 16
+INPUT_LAYER = 159
+HIDDEN_LAYER1 = 318
+HIDDEN_LAYER2 = 318
 OUTPUT_LAYER = 1
 TRAINING_ITERATIONS = 5001
 OUTFILE = OUTPUT_DIRECTORY + '/NN_OUTPUT/NN_{}_LOG.csv'
@@ -23,9 +23,9 @@ OUTFILE = OUTPUT_DIRECTORY + '/NN_OUTPUT/NN_{}_LOG.csv'
 
 def main():
     """Run this experiment"""
-    training_ints = initialize_instances(TRAIN_DATA_FILE)
-    testing_ints = initialize_instances(TEST_DATA_FILE)
-    validation_ints = initialize_instances(VALIDATE_DATA_FILE)
+    training_ints = initialize_instances('data/Ufc_train.csv')
+    testing_ints = initialize_instances('data/Ufc_test.csv')
+    validation_ints = initialize_instances('data/Ufc_validate.csv')
     factory = BackPropagationNetworkFactory()
     measure = SumOfSquaresError()
     data_set = DataSet(training_ints)
